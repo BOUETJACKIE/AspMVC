@@ -1,18 +1,10 @@
 ﻿
-@{
-    Layout = null;
-}
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div> 
-        <h1>Accueil</h1>
-    </div>
-</body>
-</html>
+            <h1>Accueil</h1>
+            <a href="~/a-propos"> A propos</a>
+            <br />
+            @Html.ActionLink("A propos", "About", "Home")
+            <br />
+            <a href="@Url.Action("About","Home")">A propos</a>
+            <br />
+            <a href="@Url.RouteUrl("AboutRoute")">A propos</a>
