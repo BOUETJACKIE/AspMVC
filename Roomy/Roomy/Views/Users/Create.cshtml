@@ -5,14 +5,16 @@
 }
 
 <h2>Nouvel utilisateur</h2>
-<div class=" row">
-    <div class="col-md-4">
 
 
 
         @using (Html.BeginForm("Create", "users", System.Web.Mvc.FormMethod.Post))
 
-        {<div class="form-group">
+
+
+        {<div class="container">
+            
+            <div class="form-group">
                 @*<label for="inputNom">Nom</label>
                     <input type="text" name="Lastname" id="inputNom" placeholder="Entrer votre nom" class="form-control"/>*@
                 @Html.LabelFor(x => x.Lastname, "Nom")
@@ -65,12 +67,10 @@
 
 
             <button type="submit" class="btn btn-primary">Enregistrer</button>
-        }
+        
     </div>
 
-</div>
-@section SectionScripts {
+        }
 
-<script src="~/Scripts/jquery.validate.min.js"></script>
-<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
-}
+
+
