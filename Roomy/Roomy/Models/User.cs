@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -9,6 +10,8 @@ namespace Roomy.Models
     public class User:BaseModel
 
     {
+
+
         [Required(ErrorMessage ="le champs {0} est obligatoire")]
         [Display(Name ="nom")]
         [StringLength(50,MinimumLength =2,
@@ -44,5 +47,12 @@ namespace Roomy.Models
         [DataType(DataType.Password)]
         [Compare("Password", ErrorMessage ="Erreur de la confirmation du {0}")]
         public string ConfirmedPassword { get; set; }
+
+
+        [Required(ErrorMessage ="Civité obligatoire")]
+        [Display(Name ="Civilité")]
+        public int CivilityID { get; set; }
+        [ForeignKey("CivilityID")]
+        public Civility Civility { get; set; }
     }
 }
