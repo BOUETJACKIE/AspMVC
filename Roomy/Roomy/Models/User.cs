@@ -38,7 +38,7 @@ namespace Roomy.Models
             ErrorMessage = "{0} incorrect.")]
         public string Password { get; set; }
 
-        [Display(Name = "Confirmation du {0}")]
+        [Display(Name = "Confirmation du mot de passe")]
         [DataType(DataType.Password)]
         [Compare("Password", ErrorMessage ="Erreur de la confirmation du {0}")]
         public string ConfirmedPassword { get; set; }
