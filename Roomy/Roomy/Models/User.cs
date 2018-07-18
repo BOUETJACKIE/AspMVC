@@ -28,6 +28,7 @@ namespace Roomy.Models
                            @"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" +
                            @".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$",
                            ErrorMessage = "L'adresse mail n'est pas au bon format")] 
+        [ExistEmail(ErrorMessage ="le mail existe déjà")]
         //[DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 

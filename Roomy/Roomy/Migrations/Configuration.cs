@@ -13,7 +13,7 @@ namespace Roomy.Migrations
         {
             this.AutomaticMigrationsEnabled = false;
         }
-        protected override void Seed(RoomyDbContext context)
+       /* protected override void Seed(RoomyDbContext context)
         {
             context.Civilities.AddOrUpdate(
                 new Models.Civility { Label = "Monsieur" },
@@ -21,6 +21,7 @@ namespace Roomy.Migrations
                 new Models.Civility { Label = "Mademoiselle" });
 
                 
-        }
+        }*/
+    
     }
 }
