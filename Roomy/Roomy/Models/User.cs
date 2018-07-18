@@ -34,7 +34,7 @@ namespace Roomy.Models
         [Required(ErrorMessage = "le champs {0} est obligatoire")]
         [Display(Name = "Date de Naissance")]
         [DataType(DataType.Date)]
-        [Major(ErrorMessage="Vous devez etre Majeur!" )]
+        [Major(18,ErrorMessage="Vous devez etre Majeur!" )]
         public DateTime BirthDate { get; set; }
 
         [Required(ErrorMessage ="le champ {0} est obligatoire")]
