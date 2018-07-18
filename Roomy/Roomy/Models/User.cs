@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Roomy.Utils.Validators;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -33,6 +34,7 @@ namespace Roomy.Models
         [Required(ErrorMessage = "le champs {0} est obligatoire")]
         [Display(Name = "Date de Naissance")]
         [DataType(DataType.Date)]
+        [Major(ErrorMessage="Vous devez etre Majeur!" )]
         public DateTime BirthDate { get; set; }
 
         [Required(ErrorMessage ="le champ {0} est obligatoire")]
@@ -46,6 +48,7 @@ namespace Roomy.Models
         [Display(Name = "Confirmation du mot de passe")]
         [DataType(DataType.Password)]
         [Compare("Password", ErrorMessage ="Erreur de la confirmation du {0}")]
+        [NotMapped]
         public string ConfirmedPassword { get; set; }
 
 
