@@ -116,8 +116,11 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\roomy.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -150,6 +153,16 @@
     <Content Include="Areas\BackOffice\Views\Rooms\Details.cshtml" />
     <Content Include="Areas\BackOffice\Views\Rooms\Edit.cshtml" />
     <Content Include="Areas\BackOffice\Views\Rooms\Index.cshtml" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="Areas\BackOffice\Views\Categories\Create.cshtml" />
+    <Content Include="Areas\BackOffice\Views\Categories\Delete.cshtml" />
+    <Content Include="Areas\BackOffice\Views\Categories\Details.cshtml" />
+    <Content Include="Areas\BackOffice\Views\Categories\Edit.cshtml" />
+    <Content Include="Areas\BackOffice\Views\Categories\Index.cshtml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -184,6 +197,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\BackOffice\BackOfficeAreaRegistration.cs" />
+    <Compile Include="Areas\BackOffice\Controllers\CategoriesController.cs" />
     <Compile Include="Areas\BackOffice\Controllers\DashboardController.cs" />
     <Compile Include="Areas\BackOffice\Controllers\RoomsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -205,8 +219,17 @@
     <Compile Include="Migrations\201807181348532_roomcreate.Designer.cs">
       <DependentUpon>201807181348532_roomcreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807191000411_Addcategorie.cs" />
+    <Compile Include="Migrations\201807191000411_Addcategorie.Designer.cs">
+      <DependentUpon>201807191000411_Addcategorie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807191021229_ModifTableRoom.cs" />
+    <Compile Include="Migrations\201807191021229_ModifTableRoom.Designer.cs">
+      <DependentUpon>201807191021229_ModifTableRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\Categorie.cs" />
     <Compile Include="Models\Civility.cs" />
     <Compile Include="Models\Room.cs" />
     <Compile Include="Models\User.cs" />
@@ -253,6 +276,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807181348532_roomcreate.resx">
       <DependentUpon>201807181348532_roomcreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807191000411_Addcategorie.resx">
+      <DependentUpon>201807191000411_Addcategorie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807191021229_ModifTableRoom.resx">
+      <DependentUpon>201807191021229_ModifTableRoom.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

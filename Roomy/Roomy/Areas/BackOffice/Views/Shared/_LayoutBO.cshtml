@@ -12,6 +12,7 @@
 
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/roomy.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
 </head>
 <body>
     <div class="container">
@@ -38,7 +39,17 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="@Url.Action("Index","Rooms")">Voir</a>
                             <a class="dropdown-item" href="@Url.Action("Create","Rooms")">Ajouter</a>
-                            
+
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Catégories
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="@Url.Action("Index","Categories")">Voir</a>
+                            <a class="dropdown-item" href="@Url.Action("Create","Categories")">Ajouter</a>
+
                         </div>
                     </li>
                     <li class="nav-item">

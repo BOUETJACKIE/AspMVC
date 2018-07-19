@@ -8,10 +8,13 @@
 
 <p>
    @*@ @Html.ActionLink("Create New","Create")*@
-    <a href="@Url.Action("Create")"class="btn btn-info">Ajouter une salle</a>
+    <a href="@Url.Action("Create")"class="btn btn-info"><i class="fa fa-plus text-xl-center">  Ajouter une salle</i></a>
 </p>
 <table class="table table-bordered table-striped" >
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Categorie.Name)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.User.Lastname)
         </th>
@@ -36,6 +39,9 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.Categorie.Name)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.User.Lastname)
         </td>
         <td>
@@ -54,9 +60,12 @@
             @Html.DisplayFor(modelItem => item.CreatedAt)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
             @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })*@
+            <a href="@Url.Action("Edit", new {id=item.ID})"><i class="fa fa-pencil"></i></a>
+            <a href="@Url.Action("Details", new {id=item.ID})"><i class="fa fa-search"></i></a>
+            <a href="@Url.Action("Delete", new {id=item.ID})"><i class="fa fa-trash"></i></a>
         </td>
     </tr>
 }
