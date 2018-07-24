@@ -21,5 +21,7 @@ namespace Roomy.Data
 
         public DbSet<Categorie> Categories { get; set; }
 
+        public DbSet<RoomFile>RoomFiles { get; set; }
+
     }
 }

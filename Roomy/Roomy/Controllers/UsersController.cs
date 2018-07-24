@@ -9,10 +9,9 @@ using Roomy.Utils;
 
 namespace Roomy.Controllers
 {
-    public class UsersController : Controller
+    public class UsersController : BaseController
 
     {
-        private RoomyDbContext db = new RoomyDbContext();
 
         // GET: Users
         [HttpGet]
@@ -36,20 +35,15 @@ namespace Roomy.Controllers
                 db.SaveChanges();
 
                 //redirection 
+                TempData["Message"] = $"Utilisateur{user.Firstname}enregistré.";
+                return RedirectToAction("Index", "Home");
 
             }
             ViewBag.civilities = db.Civilities.ToList();
             return View();
             
         }
-        protected override void Dispose(bool disposing)
-        {
-            if(disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+      
 
     }
 

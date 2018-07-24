@@ -56,6 +56,8 @@ namespace Roomy.Areas.BackOffice.Controllers
             {
                 db.Categories.Add(categorie);
                 db.SaveChanges();
+                TempData["Message"] = $"Catégorie {categorie.Name} enregistrée.";
+
                 return RedirectToAction("Index");
             }
 
@@ -88,6 +90,8 @@ namespace Roomy.Areas.BackOffice.Controllers
             {
                 db.Entry(categorie).State = EntityState.Modified;
                 db.SaveChanges();
+                TempData["Message"] = $"Catégorie  {categorie.Name}  enregistrée.";
+
                 return RedirectToAction("Index");
             }
             return View(categorie);
@@ -116,6 +120,8 @@ namespace Roomy.Areas.BackOffice.Controllers
             Categorie categorie = db.Categories.Find(id);
             db.Categories.Remove(categorie);
             db.SaveChanges();
+            TempData["Message"] = $"Catégorie  {categorie.Name} supprimée.";
+
             return RedirectToAction("Index");
         }
 
